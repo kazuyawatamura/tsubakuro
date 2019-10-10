@@ -1,0 +1,211 @@
+/* ================================= 
+全体の横幅を設定
+================================= */
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* ================================= 
+ヘッダー
+================================= */
+/* 上下の余白 */
+header {
+  padding: 30px 0;
+}
+/* メインイメージを表示 */
+.mainimage {
+  position: relative;
+  height: 424px;
+  background: url(../images/mainimage.jpg) no-repeat 0 0;
+}
+/* work hard, play hardの位置を設置 */
+.maincopy {
+  position: absolute;
+  top: 45px;
+  right: 38px;
+}
+
+/* ================================= 
+ナビゲーション
+================================= */
+/* 上下の余白 */
+.navi {
+  margin: 40px 0 90px;
+}
+/* 横並び設定 */
+.navi-list {
+  display: flex;
+}
+/* アイテムそれぞれの横幅を設定 */
+.navi-list li {
+  width: 200px;
+}
+/*
+ボタンのスタイル
+注意：aタグをblock要素にしpaddingを設定しないとクリック領域が広くなりません
+ */
+.navi-list li a {
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 9px 0;
+  text-decoration: none;
+}
+/* 奇数のliタグの中のaタグの背景色を設定
+ややこしいですが覚えておきましょう */
+.navi-list li:nth-of-type(odd) a {
+  background-color: #fafafa;
+}
+/* ボタンにマウスをオンしたら背景色を変更 */
+.navi-list li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* ================================= 
+アバウト
+================================= */
+/* アバウトの横幅を設定
+margin 0 auto で中央寄せ */
+.about {
+  width: 640px;
+  margin: 0 auto 90px;
+}
+/* 赤い帯やWebフォントなどスタイルを設定 */
+.about h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  padding: 7px 0 8px;
+  margin-bottom: 40px;
+  background-color: #D35933;
+}
+/* 平文よりも少し大きく太いためスタイルを設定 */
+.about h3 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+/* ================================= 
+コンテンツ
+================================= */
+/* それぞれのセクション下の余白を一括設定
+「複数一括セレクタ」 */
+.landscape,
+.goods,
+.bird {
+  margin-bottom: 90px;
+}
+
+/* 文章は違いますが全て同じスタイルなので複数一括セレクタで太文字などのスタイルを設定 */
+.landscape h2,
+.goods h2,
+.bird h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #D8D8D8;
+}
+/* それぞれのアイコン右の余白を設定 */
+.landscape h2 img,
+.goods h2 img,
+.bird h2 img {
+  margin-right: 14px;
+}
+/* 横並び設定 */
+.flex {
+  display: flex;
+}
+/* 画像右側の余白を設定 */
+.flex img {
+  margin-right: 20px;
+}
+/* 文章の行間を指定
+フォントサイズ起算の倍数を入れてみましょう
+例：フォントサイズ16px(A) 行間32px(B)の場合は、B割るA=2 */
+.flex p {
+  line-height: 2;
+}
+
+
+/* ================================= 
+フッター
+================================= */
+/* フッターの上の余白の設定 */
+footer {
+  margin-top: 160px;
+}
+/* オレンジ色の領域をスタイル設定 */
+.contact {
+  text-align: center;
+  font-weight: bold;
+  padding: 47px 0 46px;
+  background-color: #FF7F4F;
+}
+/* お気軽に〜の文言スタイル */
+.contact h2 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+/* ボタンのスタイル
+クリックできる領域を大きくするためにwidthやpaddingを設定
+しかしインライン要素はwidthなどの設定ができない為、ブロック要素に変更
+（aタグの初期値はインライン要素）
+
+・box-shadow の数値はは左から
+[水平方向の距離] [垂直方向の距離] [ぼかし距離] [広がり距離] [影の色]
+
+・transition でアニメーションさせる
+注意：hover側ではなくて最初のスタイル側に書く事
+*/
+.contact .button {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .2);
+  width: 400px;
+  padding: 15px 0;
+  margin: 0 auto 40px;
+  background-color: #fff;
+  transition: all .2s;
+}
+/* ボタンにマウスをオンしたら影の大きさを変更 */
+.contact .button:hover {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .4);
+}
+/* 画像と文字を水平にする */
+.contact .button img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/* またはお電話で〜のスタイル */
+.contact p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+/* 電話番号のスタイル。Webフォントを適用 */
+.contact .tellink {
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+/* クリックできることがわかるようにマウスオンで下線が出るように設定 */
+.contact .tellink:hover {
+  text-decoration: underline;
+}
+/* コピーライトのスタイル */
+small {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  padding: 72px 0 26px;
+}
