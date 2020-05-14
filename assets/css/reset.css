@@ -38,6 +38,10 @@ html {
    # General elements
    # ================================================================= */
 
+ul, ol {
+  list-style-type: none;
+}
+
 hr {
   overflow: visible; /* Show the overflow in Edge and IE */
   height: 0; /* Add the correct box sizing in Firefox */
