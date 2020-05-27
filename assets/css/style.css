@@ -1,4 +1,12 @@
 /* ================================= 
+全体
+================================= */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ================================= 
 全体の横幅を設定
 ================================= */
 .wrapper {
@@ -36,6 +44,7 @@ header {
 /* 横並び設定 */
 .navi-list {
   display: flex;
+  list-style: none;
 }
 /* アイテムそれぞれの横幅を設定 */
 .navi-list li {
@@ -117,6 +126,7 @@ margin 0 auto で中央寄せ */
 .landscape h2 img,
 .goods h2 img,
 .bird h2 img {
+  vertical-align: middle;
   margin-right: 14px;
 }
 /* 横並び設定 */
